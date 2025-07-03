@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tech in My Style v2</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.43.0/min/vs/loader.min.js"></script>
+</head>
+<body>
+  <header>👨‍💻 Tech in My Style v2 - Python Compiler</header>
+  <main class="container">
+    <div id="editor" class="editor"></div>
+    <div class="right-panel">
+      <div class="toolbar">
+        <button onclick="runCode()">▶️ Run</button>
+        <button onclick="resetCode()">♻️ Reset</button>
+        <input type="file" id="fileInput" />
+      </div>
+      <pre id="output" class="output"></pre>
+      <img id="plot" class="plot" style="display:none;" />
+    </div>
+  </main>
+  <script src="/static/script.js"></script>
+</body>
+</html>

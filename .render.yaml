@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: python-web-compiler
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    runtime: python
+    region: oregon  # or change to 'frankfurt' if closer to Europe/India
+    plan: free
+    buildFilter:
+      paths:
+        - ./**
+    autoDeploy: true
+    envVars:
+      - key: FLASK_ENV
+        value: production
